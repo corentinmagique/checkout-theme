@@ -128,7 +128,7 @@ function initSlider(target) {
                         </div>
                         <div class="d-flex flex-row justify-content-between align-items-center">
                             <div class="picture_add_form">
-                                <img src="./../dist/img/samoussabanane.jpg" height="132px" class="rounded m-2">
+                                <img src="assets/img/samoussabanane.jpg" height="132px" class="rounded m-2">
                                 <input type="file" name="item-pic" id="item-pic">
                             </div>
                             
@@ -263,7 +263,7 @@ $(document).ready(function()
                         <div class="d-flex flex-column align-items-center me-4">
                             <div class="card menu-icon animate__animated animate__bounceIn" style="background-color:#CBEBFF;">
                                 <div class="card-body d-flex flex-column justify-content-center align-items-center">
-                                    <img height="32px" src="./../dist/img/checkout.png">
+                                    <img height="32px" src="assets/img/checkout.png">
                                 </div>
                             </div>
                             <span class="text-white mt-2">Ouvrir tiroir</span>
@@ -272,7 +272,7 @@ $(document).ready(function()
                         <div class="d-flex flex-column align-items-center me-4">
                             <div class="card menu-icon animate__animated animate__bounceIn" style="background-color:#FDFDFC;">
                                 <div class="card-body d-flex flex-column justify-content-center align-items-center">
-                                    <img height="32px" src="./../dist/img/box.png">
+                                    <img height="32px" src="assets/img/box.png">
                                 </div>
                             </div>
                             <span class="text-white mt-2">Stocks</span>
@@ -281,7 +281,7 @@ $(document).ready(function()
                         <div class="d-flex flex-column align-items-center me-4">
                             <div class="card menu-icon animate__animated animate__bounceIn" style="background-color:#2F3D4E;">
                                 <div class="card-body d-flex flex-column justify-content-center align-items-center">
-                                    <img height="32px" src="./../dist/img/ticket.png">
+                                    <img height="32px" src="assets/img/ticket.png">
                                 </div>
                             </div>
                             <span class="text-white mt-2">Rapp. ticket</span>
@@ -290,7 +290,7 @@ $(document).ready(function()
                         <div class="d-flex flex-column align-items-center me-4">
                             <div class="card menu-icon animate__animated animate__bounceIn" style="background-color:#73C5B7;">
                                 <div class="card-body d-flex flex-column justify-content-center align-items-center">
-                                    <img height="32px" src="./../dist/img/money.png">
+                                    <img height="32px" src="assets/img/money.png">
                                 </div>
                             </div>
                             <span class="text-white mt-2">Entrées/Sorties</span>
@@ -299,7 +299,7 @@ $(document).ready(function()
                         <div class="d-flex flex-column align-items-center me-4">
                             <div class="card menu-icon animate__animated animate__bounceIn" style="background-color:#F6634B;">
                                 <div class="card-body d-flex flex-column justify-content-center align-items-center">
-                                    <img height="32px" src="./../dist/img/layout.png">
+                                    <img height="32px" src="assets/img/layout.png">
                                 </div>
                             </div>
                             <span class="text-white mt-2">Layout</span>
@@ -308,7 +308,7 @@ $(document).ready(function()
                         <div class="d-flex flex-column align-items-center me-4">
                             <div class="card menu-icon animate__animated animate__bounceIn" style="background-color:#CBEBFF;">
                                 <div class="card-body d-flex flex-column justify-content-center align-items-center">
-                                    <img height="32px" src="./../dist/img/cog.png">
+                                    <img height="32px" src="assets/img/cog.png">
                                 </div>
                             </div>
                             <span class="text-white mt-2">Paramètres</span>
@@ -345,7 +345,7 @@ $(document).ready(function()
                                         <li class="active">
                                             <a href="#" class="row">
                                                 <div class="col-3 d-flex flex-column justify-content-center align-items-center">
-                                                    <span class="icon"><img src="./../dist/img/money.png" height="32px"></span>
+                                                    <span class="icon"><img src="assets/img/money.png" height="32px"></span>
                                                 </div>  
                                                 <div class="col-9">
                                                     <div class="d-flex flex-column m-3">
@@ -366,7 +366,7 @@ $(document).ready(function()
                                         <li>
                                             <a href="#" class="row">
                                                 <div class="col-3 d-flex flex-column justify-content-center align-items-center">
-                                                    <span class="icon"><img src="./../dist/img/credit-card.png" height="32px"></span>
+                                                    <span class="icon"><img src="assets/img/credit-card.png" height="32px"></span>
                                                 </div>  
                                                 <div class="col-9">
                                                     <div class="d-flex flex-column m-3">
@@ -387,7 +387,7 @@ $(document).ready(function()
                                         <li>
                                             <a href="#" class="row">
                                                 <div class="col-3 d-flex flex-column justify-content-center align-items-center">
-                                                    <span class="icon"><img src="./../dist/img/cheque.png" height="32px"></span>
+                                                    <span class="icon"><img src="assets/img/cheque.png" height="32px"></span>
                                                 </div>  
                                                 <div class="col-9">
                                                     <div class="d-flex flex-column m-3">
@@ -408,7 +408,7 @@ $(document).ready(function()
                                         <li>
                                             <a href="#" class="row">
                                                 <div class="col-3 d-flex flex-column justify-content-center align-items-center">
-                                                    <span class="icon"><img src="./../dist/img/ticket.png" height="32px"></span>
+                                                    <span class="icon"><img src="assets/img/ticket.png" height="32px"></span>
                                                 </div>  
                                                 <div class="col-9">
                                                     <div class="d-flex flex-column m-3">
@@ -672,42 +672,42 @@ $(document).ready(function()
                     <ul>
                         <li>
                             <a href="#">
-                                <span class="icon"><img src="./../dist/img/money.png" height="32px"></span>
+                                <span class="icon"><img src="assets/img/money.png" height="32px"></span>
                                 <span class="title">Espèce</span>
                             </a>
                         </li>
             
                         <li>
                             <a href="#">
-                                <span class="icon"><img src="./../dist/img/credit-card.png" height="32px"></span>
+                                <span class="icon"><img src="assets/img/credit-card.png" height="32px"></span>
                                 <span class="title">Carte</span>
                             </a>
                         </li>
             
                         <li>
                             <a href="#">
-                                <span class="icon"><img src="./../dist/img/cheque.png" height="32px"></span>
+                                <span class="icon"><img src="assets/img/cheque.png" height="32px"></span>
                                 <span class="title">Chèque</span>
                             </a>
                         </li>
             
                         <li>
                             <a href="#">
-                                <span class="icon"><img src="./../dist/img/ticket.png" height="32px"></span>
+                                <span class="icon"><img src="assets/img/ticket.png" height="32px"></span>
                                 <span class="title">Titre</span>
                             </a>
                         </li>
             
                         <li>
                             <a href="#">
-                                <span class="icon"><img src="./../dist/img/team.png" height="32px"></span>
+                                <span class="icon"><img src="assets/img/team.png" height="32px"></span>
                                 <span class="title">Compte</span>
                             </a>
                         </li>
             
                         <li>
                             <a href="#">
-                                <span class="icon"><img src="./../dist/img/giftbox.png" height="32px"></span>
+                                <span class="icon"><img src="assets/img/giftbox.png" height="32px"></span>
                                 <span class="title">Avoir</span>
                             </a>
                         </li>
@@ -837,63 +837,63 @@ $(document).ready(function()
                                 <div class="page first courant row justify-content-center">
 
                                     <div class="col-2 card product animate__animated animate__bounceIn closeModal">
-                                        <img src="./../dist/img/samoussabanane.jpg" height="48px" class="rounded mt-2">
+                                        <img src="assets/img/samoussabanane.jpg" height="48px" class="rounded mt-2">
                                         <span class="text-center fw-bold fs-small m-1">Product 1</span>
                                     </div>
                                     <div class="col-2 card product animate__animated animate__bounceIn closeModal">
-                                        <img src="./../dist/img/samoussabanane.jpg" height="48px" class="rounded mt-2">
+                                        <img src="assets/img/samoussabanane.jpg" height="48px" class="rounded mt-2">
                                         <span class="text-center fw-bold fs-small m-1">Product 1</span>
                                     </div>
                                     <div class="col-2 card product animate__animated animate__bounceIn closeModal">
-                                        <img src="./../dist/img/samoussabanane.jpg" height="48px" class="rounded mt-2">
+                                        <img src="assets/img/samoussabanane.jpg" height="48px" class="rounded mt-2">
                                         <span class="text-center fw-bold fs-small m-1">Product 1</span>
                                     </div>
                                     <div class="col-2 card product animate__animated animate__bounceIn closeModal">
-                                        <img src="./../dist/img/samoussabanane.jpg" height="48px" class="rounded mt-2">
+                                        <img src="assets/img/samoussabanane.jpg" height="48px" class="rounded mt-2">
                                         <span class="text-center fw-bold fs-small m-1">Product 1</span>
                                     </div>
                                     <div class="col-2 card product animate__animated animate__bounceIn closeModal">
-                                        <img src="./../dist/img/samoussabanane.jpg" height="48px" class="rounded mt-2">
+                                        <img src="assets/img/samoussabanane.jpg" height="48px" class="rounded mt-2">
                                         <span class="text-center fw-bold fs-small m-1">Product 1</span>
                                     </div>
                                     <div class="col-2 card product animate__animated animate__bounceIn closeModal">
-                                        <img src="./../dist/img/samoussabanane.jpg" height="48px" class="rounded mt-2">
+                                        <img src="assets/img/samoussabanane.jpg" height="48px" class="rounded mt-2">
                                         <span class="text-center fw-bold fs-small m-1">Product 1</span>
                                     </div>
                                     <div class="col-2 card product animate__animated animate__bounceIn closeModal">
-                                        <img src="./../dist/img/samoussabanane.jpg" height="48px" class="rounded mt-2">
+                                        <img src="assets/img/samoussabanane.jpg" height="48px" class="rounded mt-2">
                                         <span class="text-center fw-bold fs-small m-1">Product 1</span>
                                     </div>
                                     <div class="col-2 card product animate__animated animate__bounceIn closeModal">
-                                        <img src="./../dist/img/samoussabanane.jpg" height="48px" class="rounded mt-2">
+                                        <img src="assets/img/samoussabanane.jpg" height="48px" class="rounded mt-2">
                                         <span class="text-center fw-bold fs-small m-1">Product 1</span>
                                     </div>
                                     <div class="col-2 card product animate__animated animate__bounceIn closeModal">
-                                        <img src="./../dist/img/samoussabanane.jpg" height="48px" class="rounded mt-2">
+                                        <img src="assets/img/samoussabanane.jpg" height="48px" class="rounded mt-2">
                                         <span class="text-center fw-bold fs-small m-1">Product 1</span>
                                     </div>
                                     <div class="col-2 card product animate__animated animate__bounceIn closeModal">
-                                        <img src="./../dist/img/samoussabanane.jpg" height="48px" class="rounded mt-2">
+                                        <img src="assets/img/samoussabanane.jpg" height="48px" class="rounded mt-2">
                                         <span class="text-center fw-bold fs-small m-1">Product 1</span>
                                     </div>
                                     <div class="col-2 card product animate__animated animate__bounceIn closeModal">
-                                        <img src="./../dist/img/samoussabanane.jpg" height="48px" class="rounded mt-2">
+                                        <img src="assets/img/samoussabanane.jpg" height="48px" class="rounded mt-2">
                                         <span class="text-center fw-bold fs-small m-1">Product 1</span>
                                     </div>
                                     <div class="col-2 card product animate__animated animate__bounceIn closeModal">
-                                        <img src="./../dist/img/samoussabanane.jpg" height="48px" class="rounded mt-2">
+                                        <img src="assets/img/samoussabanane.jpg" height="48px" class="rounded mt-2">
                                         <span class="text-center fw-bold fs-small m-1">Product 1</span>
                                     </div>
                                     <div class="col-2 card product animate__animated animate__bounceIn closeModal">
-                                        <img src="./../dist/img/samoussabanane.jpg" height="48px" class="rounded mt-2">
+                                        <img src="assets/img/samoussabanane.jpg" height="48px" class="rounded mt-2">
                                         <span class="text-center fw-bold fs-small m-1">Product 1</span>
                                     </div>
                                     <div class="col-2 card product animate__animated animate__bounceIn closeModal">
-                                        <img src="./../dist/img/samoussabanane.jpg" height="48px" class="rounded mt-2">
+                                        <img src="assets/img/samoussabanane.jpg" height="48px" class="rounded mt-2">
                                         <span class="text-center fw-bold fs-small m-1">Product 1</span>
                                     </div>
                                     <div class="col-2 card product animate__animated animate__bounceIn closeModal">
-                                        <img src="./../dist/img/samoussabanane.jpg" height="48px" class="rounded mt-2">
+                                        <img src="assets/img/samoussabanane.jpg" height="48px" class="rounded mt-2">
                                         <span class="text-center fw-bold fs-small m-1">Product 1</span>
                                     </div>
                                     
@@ -902,31 +902,31 @@ $(document).ready(function()
                                 <div class="page row justify-content-center">
 
                                     <div class="col-2 card product animate__animated animate__bounceIn closeModal">
-                                        <img src="./../dist/img/samoussabanane.jpg" height="48px" class="rounded mt-2">
+                                        <img src="assets/img/samoussabanane.jpg" height="48px" class="rounded mt-2">
                                         <span class="text-center fw-bold fs-small m-1">Product 1</span>
                                     </div>
                                     <div class="col-2 card product animate__animated animate__bounceIn closeModal">
-                                        <img src="./../dist/img/samoussabanane.jpg" height="48px" class="rounded mt-2">
+                                        <img src="assets/img/samoussabanane.jpg" height="48px" class="rounded mt-2">
                                         <span class="text-center fw-bold fs-small m-1">Product 1</span>
                                     </div>
                                     <div class="col-2 card product animate__animated animate__bounceIn closeModal">
-                                        <img src="./../dist/img/samoussabanane.jpg" height="48px" class="rounded mt-2">
+                                        <img src="assets/img/samoussabanane.jpg" height="48px" class="rounded mt-2">
                                         <span class="text-center fw-bold fs-small m-1">Product 1</span>
                                     </div>
                                     <div class="col-2 card product animate__animated animate__bounceIn closeModal">
-                                        <img src="./../dist/img/samoussabanane.jpg" height="48px" class="rounded mt-2">
+                                        <img src="assets/img/samoussabanane.jpg" height="48px" class="rounded mt-2">
                                         <span class="text-center fw-bold fs-small m-1">Product 1</span>
                                     </div>
                                     <div class="col-2 card product animate__animated animate__bounceIn closeModal">
-                                        <img src="./../dist/img/samoussabanane.jpg" height="48px" class="rounded mt-2">
+                                        <img src="assets/img/samoussabanane.jpg" height="48px" class="rounded mt-2">
                                         <span class="text-center fw-bold fs-small m-1">Product 1</span>
                                     </div>
                                     <div class="col-2 card product animate__animated animate__bounceIn closeModal">
-                                        <img src="./../dist/img/samoussabanane.jpg" height="48px" class="rounded mt-2">
+                                        <img src="assets/img/samoussabanane.jpg" height="48px" class="rounded mt-2">
                                         <span class="text-center fw-bold fs-small m-1">Product 1</span>
                                     </div>
                                     <div class="col-2 card product animate__animated animate__bounceIn closeModal">
-                                        <img src="./../dist/img/samoussabanane.jpg" height="48px" class="rounded mt-2">
+                                        <img src="assets/img/samoussabanane.jpg" height="48px" class="rounded mt-2">
                                         <span class="text-center fw-bold fs-small m-1">Product 1</span>
                                     </div>
                             
@@ -935,20 +935,20 @@ $(document).ready(function()
 
                                 <div class="page row justify-content-center">
                                     <div class="col-2 card product animate__animated animate__bounceIn closeModal">
-                                        <img src="./../dist/img/samoussabanane.jpg" height="48px" class="rounded mt-2">
+                                        <img src="assets/img/samoussabanane.jpg" height="48px" class="rounded mt-2">
                                         <span class="text-center fw-bold fs-small m-1">Product 1</span>
                                     </div>
                                     
                                     <div class="col-2 card product animate__animated animate__bounceIn closeModal">
-                                        <img src="./../dist/img/samoussabanane.jpg" height="48px" class="rounded mt-2">
+                                        <img src="assets/img/samoussabanane.jpg" height="48px" class="rounded mt-2">
                                         <span class="text-center fw-bold fs-small m-1">Product 1</span>
                                     </div>
                                     <div class="col-2 card product animate__animated animate__bounceIn closeModal">
-                                        <img src="./../dist/img/samoussabanane.jpg" height="48px" class="rounded mt-2">
+                                        <img src="assets/img/samoussabanane.jpg" height="48px" class="rounded mt-2">
                                         <span class="text-center fw-bold fs-small m-1">Product 1</span>
                                     </div>
                                     <div class="col-2 card product animate__animated animate__bounceIn closeModal">
-                                        <img src="./../dist/img/samoussabanane.jpg" height="48px" class="rounded mt-2">
+                                        <img src="assets/img/samoussabanane.jpg" height="48px" class="rounded mt-2">
                                         <span class="text-center fw-bold fs-small m-1">Product 1</span>
                                     </div>
                                     
@@ -956,47 +956,47 @@ $(document).ready(function()
 
                                 <div class="page last row justify-content-center">
                                     <div class="col-2 card product animate__animated animate__bounceIn closeModal">
-                                        <img src="./../dist/img/samoussabanane.jpg" height="48px" class="rounded mt-2">
+                                        <img src="assets/img/samoussabanane.jpg" height="48px" class="rounded mt-2">
                                         <span class="text-center fw-bold fs-small m-1">Product 1</span>
                                     </div>
                                     <div class="col-2 card product animate__animated animate__bounceIn closeModal">
-                                        <img src="./../dist/img/samoussabanane.jpg" height="48px" class="rounded mt-2">
+                                        <img src="assets/img/samoussabanane.jpg" height="48px" class="rounded mt-2">
                                         <span class="text-center fw-bold fs-small m-1">Product 1</span>
                                     </div>
                                     <div class="col-2 card product animate__animated animate__bounceIn closeModal">
-                                        <img src="./../dist/img/samoussabanane.jpg" height="48px" class="rounded mt-2">
+                                        <img src="assets/img/samoussabanane.jpg" height="48px" class="rounded mt-2">
                                         <span class="text-center fw-bold fs-small m-1">Product 1</span>
                                     </div>
                                     <div class="col-2 card product animate__animated animate__bounceIn closeModal">
-                                        <img src="./../dist/img/samoussabanane.jpg" height="48px" class="rounded mt-2">
+                                        <img src="assets/img/samoussabanane.jpg" height="48px" class="rounded mt-2">
                                         <span class="text-center fw-bold fs-small m-1">Product 1</span>
                                     </div>
                                     <div class="col-2 card product animate__animated animate__bounceIn closeModal">
-                                        <img src="./../dist/img/samoussabanane.jpg" height="48px" class="rounded mt-2">
+                                        <img src="assets/img/samoussabanane.jpg" height="48px" class="rounded mt-2">
                                         <span class="text-center fw-bold fs-small m-1">Product 1</span>
                                     </div>
                                     <div class="col-2 card product animate__animated animate__bounceIn closeModal">
-                                        <img src="./../dist/img/samoussabanane.jpg" height="48px" class="rounded mt-2">
+                                        <img src="assets/img/samoussabanane.jpg" height="48px" class="rounded mt-2">
                                         <span class="text-center fw-bold fs-small m-1">Product 1</span>
                                     </div>
                                     <div class="col-2 card product animate__animated animate__bounceIn closeModal">
-                                        <img src="./../dist/img/samoussabanane.jpg" height="48px" class="rounded mt-2">
+                                        <img src="assets/img/samoussabanane.jpg" height="48px" class="rounded mt-2">
                                         <span class="text-center fw-bold fs-small m-1">Product 1</span>
                                     </div>
                                     <div class="col-2 card product animate__animated animate__bounceIn closeModal">
-                                        <img src="./../dist/img/samoussabanane.jpg" height="48px" class="rounded mt-2">
+                                        <img src="assets/img/samoussabanane.jpg" height="48px" class="rounded mt-2">
                                         <span class="text-center fw-bold fs-small m-1">Product 1</span>
                                     </div>
                                     <div class="col-2 card product animate__animated animate__bounceIn closeModal">
-                                        <img src="./../dist/img/samoussabanane.jpg" height="48px" class="rounded mt-2">
+                                        <img src="assets/img/samoussabanane.jpg" height="48px" class="rounded mt-2">
                                         <span class="text-center fw-bold fs-small m-1">Product 1</span>
                                     </div>
                                     <div class="col-2 card product animate__animated animate__bounceIn closeModal">
-                                        <img src="./../dist/img/samoussabanane.jpg" height="48px" class="rounded mt-2">
+                                        <img src="assets/img/samoussabanane.jpg" height="48px" class="rounded mt-2">
                                         <span class="text-center fw-bold fs-small m-1">Product 1</span>
                                     </div>
                                     <div class="col-2 card product animate__animated animate__bounceIn closeModal">
-                                        <img src="./../dist/img/samoussabanane.jpg" height="48px" class="rounded mt-2">
+                                        <img src="assets/img/samoussabanane.jpg" height="48px" class="rounded mt-2">
                                         <span class="text-center fw-bold fs-small m-1">Product 1</span>
                                     </div>
                                 </div>
