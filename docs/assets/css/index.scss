@@ -26,10 +26,10 @@ a
   overflow: auto;
 }
 
-// .movable
-// {
-//   transition: 0.2s;
-// }
+.movable
+{
+  transition: 0.2s;
+}
 
 .bg-card
 {
@@ -37,6 +37,43 @@ a
   background-color: #B1D0EC !important;
   border: none !important;
   color: #1B4C6A !important;
+}
+
+input.montant::selection
+{
+  background-color: lightgray;
+}
+
+.zizibutton
+{
+  width: 40px;
+  height: 40px;
+  background-color: #B1D0EC !important;
+  border-radius: 50%;
+  color: #1B4C6A !important;
+}
+
+.bg-blue
+{
+  color: white !important;
+  background-color: #274C6C !important;
+}
+
+.header
+{
+  input 
+  {
+    border-color: transparent !important;
+    border-radius: 10px;
+    background-color: #D5EDFF !important;
+    color: #407499 !important;
+    outline: none;
+    height: 35px;
+    &::placeholder
+    {
+      color: #407499 !important;
+    }
+  }
 }
 
 .bg-princ
@@ -47,7 +84,36 @@ a
   color: #1B4C6A !important;
 }
 
-.waiting-ticket
+.date-picker
+{
+  width: 100px;
+  border-color: transparent !important;
+  background-color: #B1D0EC !important;
+  outline: none;
+  border-radius: 10px;
+  color: #1B4C6A !important;
+  margin: 0.5em;
+  text-align: center;
+  font-weight: 500;
+}
+
+.devise-selector
+{
+  width: 60px;
+  height: 60px;
+  background-color: #B1D0EC !important;
+  border: none !important;
+  color: #1B4C6A !important;
+
+  &.active
+  {
+    background-color: #1B4C6A !important;
+    color: white !important;
+  }
+}
+
+.waiting-ticket,
+.confirmed-ticket
 {
   display: flex;
   flex-direction: column;
@@ -60,6 +126,58 @@ a
 
 }
 
+.validate-button
+{
+  background-color: #D2E7D6 !important;
+  color: #0a5a05 !important;
+  font-weight: 500;
+  height: 80px;
+  width: 80%;
+  border-radius: 2.5px;
+  margin: 0.25em;
+  span
+  {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.keyboard-button
+{
+  width: 80px;
+  height: 80px;
+  
+  border-radius: 2.5px;
+  background-color: #B1D0EB;
+  margin: 0.25em;
+  font-weight: bold;
+  color: #294A6A;
+  text-decoration: none;
+
+  &:hover
+  {
+    color: #294A6A;
+  }
+
+  &:active
+  {
+    background-color: #294A6A;
+    color: #B1D0EB;
+  }
+  
+  span
+  {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
 .bg-input
 {
   width: 100%;
@@ -68,10 +186,23 @@ a
   input
   {
     border-color: transparent;
-    // border-bottom: 1px solid #ccc;
     outline: none;
   }
 }
+
+.modal-button
+    {
+      padding: 0.5em !important;
+      margin: 1em;
+      background-color: #CBEBFF !important;
+      color: #1B4C6A !important;
+      font-size: 13px;
+      font-weight: 500;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      border-radius: 10px !important;
+    }
 
 .success-button
 {
@@ -112,23 +243,18 @@ a
   .actions-wrapper
   {
     width: 20%;
-    // position: relative;
 
     .card
     {
       background-color: #40739A;
       height: 68px;
-      // position: relative;
       .card-body
       {
         overflow: hidden !important;
-        // position: relative;
         .fastaction-wrapper
-        {
-          
+        {  
           .snap-elements
           {
-            // position: relative;
             div
             {
               opacity: 0 !important;
@@ -167,7 +293,24 @@ a
   transition: 0.5s;
 }
 
-#modal.active
+#modal2
+{
+  width: 0%;
+  height: 0%;
+
+  position: absolute;
+  
+  top: 0;
+  left: 0;
+
+  z-index: 200;
+
+  transition: 0.5s;
+}
+
+
+#modal.active,
+#modal2.active
 {
   
   width: 100%;
@@ -184,7 +327,7 @@ a
   #modal-container
   {
     width: 100%;
-    height: calc(100% - 50px);
+    height: calc(100% - 50px) !important;
 
     .menu-icon
     {
@@ -195,20 +338,6 @@ a
       {
         padding: 1.5em;
       }
-    }
-
-    .modal-button
-    {
-      padding: 0.5em !important;
-      margin: 1em;
-      background-color: #CBEBFF !important;
-      color: #1B4C6A !important;
-      font-size: 13px;
-      font-weight: 500;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      border-radius: 10px !important;
     }
 
     .picture_add_form
@@ -226,25 +355,96 @@ a
 
     }
 
+    .remise-button
+    {
+      .card
+      {
+        cursor: pointer;
+        background-color: #CBEBFF !important;
+        color: #1B4C6A !important;
+        border-color: transparent !important;
+        font-weight: 500;
+        margin: .5em;
+        border-radius: 15px;
+        width: 100px;
+        height: 50px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
     .itemdetail-menu
     {
-      // width: 40%;
-      // height: 60%;
       background-color: white;
       border-radius: 20px;
+    }
+
+    .pendingticket-menu
+    {
+      width: 80% !important;
+      height: 80% !important;
+
+      .waiting-ticket
+      {
+        background-color: #AFCFEC !important;
+        border-radius: 10px !important;
+        border-color: transparent !important;
+      }
+    }
+
+    .mdp-menu
+    {
+      width: 40%;
+      height: 50%;
+
+      .option
+      {
+        background-color: #2E86CF !important;
+        border-color: transparent !important;
+        border-radius: 10px !important;
+      }
+    }
+
+    .settings-menu
+    {
+      width: 30% !important;
+      height: 60% !important;
+      .card
+      {
+        background-color: #AFCFEC !important;
+        border-radius: 20px !important;
+        border-color: transparent !important;
+      }
+    }
+
+    .infogen-menu
+    {
+      width: 30% !important;
+      height: 80% !important;
+    }
+
+    .customer-menu
+    {
+      width: 60%;
+      height: 60%;
     }
 
     .cloture-menu
     {
       width: 80%;
+      height: 80%;
       border-radius: 20px;
       .card
       {
         background-color: #407499 !important;
+        height: 90%;
 
         .payment-method
         {
           width: 30%;
+          height: 100%;
           background-color: #274C6C !important;
           
           ul
@@ -252,6 +452,9 @@ a
             margin: 0em !important;
             width: 100%;
             height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
             li
             {
               width: 100%;
@@ -266,6 +469,7 @@ a
               }
               a 
               {
+                justify-content: center;
                 color: white;
                 .title 
                 {
@@ -285,6 +489,30 @@ a
         .recap-details
         {
           width: 70%;
+          position: absolute;
+          top: 0%;
+          left: 30%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100%;
+
+          .card
+          {
+            background-color: #274C6C !important;
+            border-radius: 10px;
+            border: none !important;
+
+          }
+
+          .card-header
+          {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100px;
+            height: 100%;
+          }
          
         }
       }
@@ -292,7 +520,7 @@ a
 
     .familles-menu
     {
-      width: 50%;
+      width: 60%;
       height: 60%;
       background-color: white;
       border-radius: 20px;
@@ -307,7 +535,6 @@ a
       .actionbar
       {
         margin: 0em 0.5em;
-        // background-color: $lightgray;
         border-radius: 5px;
       }
 
@@ -361,7 +588,6 @@ a
     .payment-menu
     {
       width: 50%;
-      height: 60%;
       background-color: white;
       border-bottom-left-radius: 5px;
       border-top-left-radius: 5px;
@@ -397,25 +623,12 @@ a
           }
         }
 
-        .keyboard-button
+        .remise
         {
-          width: 80px;
-          height: 80px;
-          border-radius: 2.5px;
-          background-color: #B1D0EB;
-          margin: 0.25em;
-          font-weight: bold;
-          color: #294A6A;
-          text-decoration: none;
-          span
-          {
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-          }
+          width: 255px !important;
         }
+        
+        
       }
 
       .options-part
@@ -488,7 +701,6 @@ a
     background-color: white;
     border: none;
   }
-  // margin: 1em !important;
 
 }
 
@@ -536,8 +748,6 @@ button
   font-weight: 500;
   font-size: 18px;
 }
-
-
 
 p {
   margin: 0;
@@ -719,6 +929,18 @@ ul {
   color: #1B4C6A !important;
 }
 
+.text-lightblue
+{
+  color: #B1D0EC !important;
+}
+
+.calendar-button
+{
+  background-color: #274C6C;
+  padding: 0.5em;
+  border-radius: 5px;
+}
+
 .bg-success
 {
   background-color: #2E87D0 !important;
@@ -769,7 +991,6 @@ ul {
 .swipe-item {
   cursor: pointer;
   position: relative;
-  // top: 500px;
   width: 100%;
   display: flex;
   flex-direction: row;

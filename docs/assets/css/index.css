@@ -15,11 +15,44 @@ a {
   overflow: auto;
 }
 
+.movable {
+  transition: 0.2s;
+}
+
 .bg-card {
   width: 100%;
   background-color: #B1D0EC !important;
   border: none !important;
   color: #1B4C6A !important;
+}
+
+input.montant::selection {
+  background-color: lightgray;
+}
+
+.zizibutton {
+  width: 40px;
+  height: 40px;
+  background-color: #B1D0EC !important;
+  border-radius: 50%;
+  color: #1B4C6A !important;
+}
+
+.bg-blue {
+  color: white !important;
+  background-color: #274C6C !important;
+}
+
+.header input {
+  border-color: transparent !important;
+  border-radius: 10px;
+  background-color: #D5EDFF !important;
+  color: #407499 !important;
+  outline: none;
+  height: 35px;
+}
+.header input::placeholder {
+  color: #407499 !important;
 }
 
 .bg-princ {
@@ -29,7 +62,32 @@ a {
   color: #1B4C6A !important;
 }
 
-.waiting-ticket {
+.date-picker {
+  width: 100px;
+  border-color: transparent !important;
+  background-color: #B1D0EC !important;
+  outline: none;
+  border-radius: 10px;
+  color: #1B4C6A !important;
+  margin: 0.5em;
+  text-align: center;
+  font-weight: 500;
+}
+
+.devise-selector {
+  width: 60px;
+  height: 60px;
+  background-color: #B1D0EC !important;
+  border: none !important;
+  color: #1B4C6A !important;
+}
+.devise-selector.active {
+  background-color: #1B4C6A !important;
+  color: white !important;
+}
+
+.waiting-ticket,
+.confirmed-ticket {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -40,6 +98,48 @@ a {
   border: none !important;
 }
 
+.validate-button {
+  background-color: #D2E7D6 !important;
+  color: #0a5a05 !important;
+  font-weight: 500;
+  height: 80px;
+  width: 80%;
+  border-radius: 2.5px;
+  margin: 0.25em;
+}
+.validate-button span {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.keyboard-button {
+  width: 80px;
+  height: 80px;
+  border-radius: 2.5px;
+  background-color: #B1D0EB;
+  margin: 0.25em;
+  font-weight: bold;
+  color: #294A6A;
+  text-decoration: none;
+}
+.keyboard-button:hover {
+  color: #294A6A;
+}
+.keyboard-button:active {
+  background-color: #294A6A;
+  color: #B1D0EB;
+}
+.keyboard-button span {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .bg-input {
   width: 100%;
   color: #1B4C6A !important;
@@ -48,6 +148,19 @@ a {
 .bg-input input {
   border-color: transparent;
   outline: none;
+}
+
+.modal-button {
+  padding: 0.5em !important;
+  margin: 1em;
+  background-color: #CBEBFF !important;
+  color: #1B4C6A !important;
+  font-size: 13px;
+  font-weight: 500;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 10px !important;
 }
 
 .success-button {
@@ -111,43 +224,48 @@ a {
   transition: 0.5s;
 }
 
-#modal.active {
+#modal2 {
+  width: 0%;
+  height: 0%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 200;
+  transition: 0.5s;
+}
+
+#modal.active,
+#modal2.active {
   width: 100%;
   height: 100%;
   background-color: rgba(34, 97, 137, 0.75);
   transition: 0.5s;
 }
-#modal.active #header {
+#modal.active #header,
+#modal2.active #header {
   height: 50px;
 }
-#modal.active #modal-container {
+#modal.active #modal-container,
+#modal2.active #modal-container {
   width: 100%;
-  height: calc(100% - 50px);
+  height: calc(100% - 50px) !important;
 }
-#modal.active #modal-container .menu-icon {
+#modal.active #modal-container .menu-icon,
+#modal2.active #modal-container .menu-icon {
   border-radius: 20px !important;
   border: none !important;
   cursor: pointer;
 }
-#modal.active #modal-container .menu-icon .card-body {
+#modal.active #modal-container .menu-icon .card-body,
+#modal2.active #modal-container .menu-icon .card-body {
   padding: 1.5em;
 }
-#modal.active #modal-container .modal-button {
-  padding: 0.5em !important;
-  margin: 1em;
-  background-color: #CBEBFF !important;
-  color: #1B4C6A !important;
-  font-size: 13px;
-  font-weight: 500;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  border-radius: 10px !important;
-}
-#modal.active #modal-container .picture_add_form {
+#modal.active #modal-container .picture_add_form,
+#modal2.active #modal-container .picture_add_form {
   position: relative;
 }
-#modal.active #modal-container .picture_add_form input {
+#modal.active #modal-container .picture_add_form input,
+#modal2.active #modal-container .picture_add_form input {
   position: absolute;
   top: 0;
   left: 0;
@@ -155,61 +273,164 @@ a {
   height: 100%;
   opacity: 0;
 }
-#modal.active #modal-container .itemdetail-menu {
+#modal.active #modal-container .remise-button .card,
+#modal2.active #modal-container .remise-button .card {
+  cursor: pointer;
+  background-color: #CBEBFF !important;
+  color: #1B4C6A !important;
+  border-color: transparent !important;
+  font-weight: 500;
+  margin: 0.5em;
+  border-radius: 15px;
+  width: 100px;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+#modal.active #modal-container .itemdetail-menu,
+#modal2.active #modal-container .itemdetail-menu {
   background-color: white;
   border-radius: 20px;
 }
-#modal.active #modal-container .cloture-menu {
+#modal.active #modal-container .pendingticket-menu,
+#modal2.active #modal-container .pendingticket-menu {
+  width: 80% !important;
+  height: 80% !important;
+}
+#modal.active #modal-container .pendingticket-menu .waiting-ticket,
+#modal2.active #modal-container .pendingticket-menu .waiting-ticket {
+  background-color: #AFCFEC !important;
+  border-radius: 10px !important;
+  border-color: transparent !important;
+}
+#modal.active #modal-container .mdp-menu,
+#modal2.active #modal-container .mdp-menu {
+  width: 40%;
+  height: 50%;
+}
+#modal.active #modal-container .mdp-menu .option,
+#modal2.active #modal-container .mdp-menu .option {
+  background-color: #2E86CF !important;
+  border-color: transparent !important;
+  border-radius: 10px !important;
+}
+#modal.active #modal-container .settings-menu,
+#modal2.active #modal-container .settings-menu {
+  width: 30% !important;
+  height: 60% !important;
+}
+#modal.active #modal-container .settings-menu .card,
+#modal2.active #modal-container .settings-menu .card {
+  background-color: #AFCFEC !important;
+  border-radius: 20px !important;
+  border-color: transparent !important;
+}
+#modal.active #modal-container .infogen-menu,
+#modal2.active #modal-container .infogen-menu {
+  width: 30% !important;
+  height: 80% !important;
+}
+#modal.active #modal-container .customer-menu,
+#modal2.active #modal-container .customer-menu {
+  width: 60%;
+  height: 60%;
+}
+#modal.active #modal-container .cloture-menu,
+#modal2.active #modal-container .cloture-menu {
   width: 80%;
+  height: 80%;
   border-radius: 20px;
 }
-#modal.active #modal-container .cloture-menu .card {
+#modal.active #modal-container .cloture-menu .card,
+#modal2.active #modal-container .cloture-menu .card {
   background-color: #407499 !important;
+  height: 90%;
 }
-#modal.active #modal-container .cloture-menu .card .payment-method {
+#modal.active #modal-container .cloture-menu .card .payment-method,
+#modal2.active #modal-container .cloture-menu .card .payment-method {
   width: 30%;
+  height: 100%;
   background-color: #274C6C !important;
 }
-#modal.active #modal-container .cloture-menu .card .payment-method ul {
+#modal.active #modal-container .cloture-menu .card .payment-method ul,
+#modal2.active #modal-container .cloture-menu .card .payment-method ul {
   margin: 0em !important;
   width: 100%;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-#modal.active #modal-container .cloture-menu .card .payment-method ul li {
+#modal.active #modal-container .cloture-menu .card .payment-method ul li,
+#modal2.active #modal-container .cloture-menu .card .payment-method ul li {
   width: 100%;
   border-bottom: 2px solid #1F3E5E;
 }
-#modal.active #modal-container .cloture-menu .card .payment-method ul li.active {
+#modal.active #modal-container .cloture-menu .card .payment-method ul li.active,
+#modal2.active #modal-container .cloture-menu .card .payment-method ul li.active {
   background-color: #407499 !important;
 }
-#modal.active #modal-container .cloture-menu .card .payment-method ul li:last-child {
+#modal.active #modal-container .cloture-menu .card .payment-method ul li:last-child,
+#modal2.active #modal-container .cloture-menu .card .payment-method ul li:last-child {
   border-bottom: none !important;
 }
-#modal.active #modal-container .cloture-menu .card .payment-method ul li a {
+#modal.active #modal-container .cloture-menu .card .payment-method ul li a,
+#modal2.active #modal-container .cloture-menu .card .payment-method ul li a {
+  justify-content: center;
   color: white;
 }
-#modal.active #modal-container .cloture-menu .card .payment-method ul li a .title {
+#modal.active #modal-container .cloture-menu .card .payment-method ul li a .title,
+#modal2.active #modal-container .cloture-menu .card .payment-method ul li a .title {
   font-weight: 500;
   text-transform: uppercase;
 }
-#modal.active #modal-container .cloture-menu .card .recap-details {
+#modal.active #modal-container .cloture-menu .card .recap-details,
+#modal2.active #modal-container .cloture-menu .card .recap-details {
   width: 70%;
+  position: absolute;
+  top: 0%;
+  left: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
-#modal.active #modal-container .familles-menu {
-  width: 50%;
+#modal.active #modal-container .cloture-menu .card .recap-details .card,
+#modal2.active #modal-container .cloture-menu .card .recap-details .card {
+  background-color: #274C6C !important;
+  border-radius: 10px;
+  border: none !important;
+}
+#modal.active #modal-container .cloture-menu .card .recap-details .card-header,
+#modal2.active #modal-container .cloture-menu .card .recap-details .card-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100%;
+}
+#modal.active #modal-container .familles-menu,
+#modal2.active #modal-container .familles-menu {
+  width: 60%;
   height: 60%;
   background-color: white;
   border-radius: 20px;
 }
-#modal.active #modal-container .familles-menu .card-body {
+#modal.active #modal-container .familles-menu .card-body,
+#modal2.active #modal-container .familles-menu .card-body {
   padding: 0;
 }
-#modal.active #modal-container .familles-menu .actionbar {
+#modal.active #modal-container .familles-menu .actionbar,
+#modal2.active #modal-container .familles-menu .actionbar {
   margin: 0em 0.5em;
   border-radius: 5px;
 }
 #modal.active #modal-container .familles-menu .family,
-#modal.active #modal-container .familles-menu .subfamily {
+#modal.active #modal-container .familles-menu .subfamily,
+#modal2.active #modal-container .familles-menu .family,
+#modal2.active #modal-container .familles-menu .subfamily {
   cursor: pointer;
   background-color: #CBEBFF !important;
   color: #1B4C6A !important;
@@ -220,7 +441,8 @@ a {
   align-items: center;
   margin: 0.5em;
 }
-#modal.active #modal-container .familles-menu .product {
+#modal.active #modal-container .familles-menu .product,
+#modal2.active #modal-container .familles-menu .product {
   cursor: pointer;
   display: flex;
   border: none;
@@ -230,11 +452,14 @@ a {
   align-items: center;
   margin: 0.5em;
 }
-#modal.active #modal-container .familles-menu .product span {
+#modal.active #modal-container .familles-menu .product span,
+#modal2.active #modal-container .familles-menu .product span {
   text-decoration: none;
 }
 #modal.active #modal-container .familles-menu .selected-family,
-#modal.active #modal-container .familles-menu .selected-subfamily {
+#modal.active #modal-container .familles-menu .selected-subfamily,
+#modal2.active #modal-container .familles-menu .selected-family,
+#modal2.active #modal-container .familles-menu .selected-subfamily {
   cursor: pointer;
   background-color: #1B4C6A !important;
   color: #CBEBFF !important;
@@ -245,73 +470,71 @@ a {
   align-items: center;
   margin: 0.5em;
 }
-#modal.active #modal-container .payment-menu {
+#modal.active #modal-container .payment-menu,
+#modal2.active #modal-container .payment-menu {
   width: 50%;
-  height: 60%;
   background-color: white;
   border-bottom-left-radius: 5px;
   border-top-left-radius: 5px;
   border-bottom-right-radius: 20px;
   border-top-right-radius: 20px;
 }
-#modal.active #modal-container .payment-menu .keyboard-part {
+#modal.active #modal-container .payment-menu .keyboard-part,
+#modal2.active #modal-container .payment-menu .keyboard-part {
   width: 70%;
   height: 100%;
 }
-#modal.active #modal-container .payment-menu .keyboard-part .header {
+#modal.active #modal-container .payment-menu .keyboard-part .header,
+#modal2.active #modal-container .payment-menu .keyboard-part .header {
   height: 30px;
 }
-#modal.active #modal-container .payment-menu .keyboard-part .header a span {
+#modal.active #modal-container .payment-menu .keyboard-part .header a span,
+#modal2.active #modal-container .payment-menu .keyboard-part .header a span {
   color: #1F4262;
 }
-#modal.active #modal-container .payment-menu .keyboard-part #active-discount-button {
+#modal.active #modal-container .payment-menu .keyboard-part #active-discount-button,
+#modal2.active #modal-container .payment-menu .keyboard-part #active-discount-button {
   text-decoration: none;
   color: #4B7493 !important;
 }
-#modal.active #modal-container .payment-menu .keyboard-part #active-discount-button span {
+#modal.active #modal-container .payment-menu .keyboard-part #active-discount-button span,
+#modal2.active #modal-container .payment-menu .keyboard-part #active-discount-button span {
   margin: 0.1em;
 }
-#modal.active #modal-container .payment-menu .keyboard-part #active-discount-button span .text {
+#modal.active #modal-container .payment-menu .keyboard-part #active-discount-button span .text,
+#modal2.active #modal-container .payment-menu .keyboard-part #active-discount-button span .text {
   font-size: 12px;
 }
-#modal.active #modal-container .payment-menu .keyboard-part .keyboard-button {
-  width: 80px;
-  height: 80px;
-  border-radius: 2.5px;
-  background-color: #B1D0EB;
-  margin: 0.25em;
-  font-weight: bold;
-  color: #294A6A;
-  text-decoration: none;
+#modal.active #modal-container .payment-menu .keyboard-part .remise,
+#modal2.active #modal-container .payment-menu .keyboard-part .remise {
+  width: 255px !important;
 }
-#modal.active #modal-container .payment-menu .keyboard-part .keyboard-button span {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-#modal.active #modal-container .payment-menu .options-part {
+#modal.active #modal-container .payment-menu .options-part,
+#modal2.active #modal-container .payment-menu .options-part {
   width: 30%;
   height: 100%;
   border-bottom-right-radius: 10px;
   border-top-right-radius: 10px;
   background-color: #1F4262;
 }
-#modal.active #modal-container .payment-menu .options-part ul {
+#modal.active #modal-container .payment-menu .options-part ul,
+#modal2.active #modal-container .payment-menu .options-part ul {
   height: 100%;
 }
-#modal.active #modal-container .payment-menu .options-part ul li {
+#modal.active #modal-container .payment-menu .options-part ul li,
+#modal2.active #modal-container .payment-menu .options-part ul li {
   display: flex;
   flex-direction: row;
   align-items: center;
   height: 16.6666666667% !important;
   border-bottom: 2px solid #1F3E5E;
 }
-#modal.active #modal-container .payment-menu .options-part ul li:last-child {
+#modal.active #modal-container .payment-menu .options-part ul li:last-child,
+#modal2.active #modal-container .payment-menu .options-part ul li:last-child {
   border-bottom: none !important;
 }
-#modal.active #modal-container .payment-menu .options-part ul li a {
+#modal.active #modal-container .payment-menu .options-part ul li a,
+#modal2.active #modal-container .payment-menu .options-part ul li a {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -321,7 +544,8 @@ a {
   color: white;
   font-weight: 500;
 }
-#modal.active #modal-container .payment-menu .options-part ul li a span {
+#modal.active #modal-container .payment-menu .options-part ul li a span,
+#modal2.active #modal-container .payment-menu .options-part ul li a span {
   margin: 1em;
 }
 
@@ -532,6 +756,16 @@ ul {
 
 .text-blue {
   color: #1B4C6A !important;
+}
+
+.text-lightblue {
+  color: #B1D0EC !important;
+}
+
+.calendar-button {
+  background-color: #274C6C;
+  padding: 0.5em;
+  border-radius: 5px;
 }
 
 .bg-success {
